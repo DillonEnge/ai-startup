@@ -10,4 +10,6 @@
 <li>Incorperate into a library being able to easily be commited to other applications</li>
 </ul>
 ## Current capability
+<ul>
 <li>Pretty much nothing, so thats good</li>
+</ul>
