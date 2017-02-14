@@ -1,4 +1,4 @@
-/**
+package src; /**
  * Created by dillonenge on 2/13/17.
  */
 import java.util.Scanner;
