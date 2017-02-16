@@ -32,7 +32,7 @@ public class MainDriver {
                 FileManipulator.storeInput(Comms.waitForInput().trim(), systemOutput);
                 continue;
             }
-            timesLooped++;
+
         }
 
     }
