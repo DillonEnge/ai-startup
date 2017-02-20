@@ -11,7 +11,6 @@ public class MainDriver {
     static String userInput;
     public static void main(String[] args) throws IOException {
         System.out.println("Rules for using ai: " + "\n" +  "Always type in full, complete sentences " + "\n" +  "avoiding any complex sentances at the beginning" + "\n" +  "and making sure to end your sentances" + "\n" +  "using the appropriate character ex. ?!." + "\n");
-        File file = new File("Phrases.txt");
         while(true){
             userInput = Comms.waitForInput().trim();
             if(timesLooped != 0 && userInput.equals("stop")){
