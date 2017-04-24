@@ -27,7 +27,7 @@ public class MainDriver {
                 FileManipulator.storeInput(systemOutput, userInput);
             } else {
                 systemOutput = FileManipulator.findOutput(Comms.createCode(userInput, systemOutput));
-                System.out.println(systemOutput);
+                System.out.println("Ai: " + systemOutput);
                 FileManipulator.storeInput(userInput, systemOutput);
             }
             if(userInput.equals("incorrect")) {

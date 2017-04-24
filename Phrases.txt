@@ -1,4 +1,2 @@
-..nullHi.
-..nullHi.
-..nullHi.
-..nullHi.
+..-Hi.
+..-Hello.
