@@ -4,9 +4,11 @@ package src; /**
 import java.util.Scanner;
 
 public class Comms {
-    static Scanner kb = new Scanner(System.in);
+    static Scanner kb;
 
     public static String waitForInput() {
+        kb = new Scanner(System.in);
+        System.out.print("You: ");
         String input = kb.nextLine();
         return input;
 
@@ -23,9 +25,24 @@ public class Comms {
         return s.substring(s.length() - 1, s.length());
     }
 
-    public static String assessSentance(String input){
-        //TODO write body
-        return null;
+    public static char assessSentance(String input){
+        kb = new Scanner(input);
+        while(kb.hasNext()){
+            String word = kb.next();
+            if(word.equalsIgnoreCase("where")){
+                return '@';
+            } if(word.equalsIgnoreCase("what")){
+                return '?';
+            } if(word.equalsIgnoreCase("when")){
+                return ':';
+            } if(word.equalsIgnoreCase("who")){
+                return '*';
+            } if(word.equalsIgnoreCase("how")){
+                return '%';
+            }
+
+        }
+        return '-';
     }
 
     public static boolean parseFor(String keyWordType, String input){
