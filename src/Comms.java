@@ -32,6 +32,12 @@ public class Comms {
             if(word.equalsIgnoreCase("where")){
                 return '@';
             } if(word.equalsIgnoreCase("what")){
+                while(kb.hasNext()) {
+                    String word2 = kb.next();
+                    if(word2.equalsIgnoreCase("name")){
+                        return '$';
+                    }
+                }
                 return '?';
             } if(word.equalsIgnoreCase("when")){
                 return ':';

@@ -20,6 +20,16 @@ public class MainDriver {
             if(timesLooped != 0 && userInput.equals("stop")){
                 break;
             }
+            if(userInput.equals("incorrect")) {
+                System.out.println("What would've made sense?");
+                FileManipulator.storeInput(Comms.waitForInput().trim(), systemOutput);
+                continue;
+            }
+            if(userInput.equals("alt")){
+                System.out.println("What could be an alternative response to this?");
+                FileManipulator.storeInput(Comms.waitForInput().trim(), systemOutput);
+                continue;
+            }
             if(FileManipulator.findOutput(Comms.createCode(userInput, systemOutput)) == null) {
                 System.out.println("What would be a proper response to this?");
                 systemOutput = Comms.waitForInput().trim();
@@ -30,11 +40,7 @@ public class MainDriver {
                 System.out.println("Ai: " + systemOutput);
                 FileManipulator.storeInput(userInput, systemOutput);
             }
-            if(userInput.equals("incorrect")) {
-                System.out.println("What would've made sense?");
-                FileManipulator.storeInput(Comms.waitForInput().trim(), systemOutput);
-                continue;
-            }
+
             timesLooped++;
         }
 
