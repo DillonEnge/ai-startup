@@ -13,6 +13,7 @@ public class Comms {
         return input;
 
     }
+    //git upload test
 
     public static String createCode(String input, String previousOutput) {
         String code;
@@ -32,6 +33,12 @@ public class Comms {
             if(word.equalsIgnoreCase("where")){
                 return '@';
             } if(word.equalsIgnoreCase("what")){
+                while(kb.hasNext()) {
+                    String word2 = kb.next();
+                    if(word2.equalsIgnoreCase("name")){
+                        return '$';
+                    }
+                }
                 return '?';
             } if(word.equalsIgnoreCase("when")){
                 return ':';
