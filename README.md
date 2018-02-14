@@ -13,5 +13,5 @@
 
 ## Current capability
 <ul>
-<li>Pretty much nothing, so thats good</li>
+<li>General Framework written out and needs some things ironed out in terms of how it is storing the code before further development</li>
 </ul>
